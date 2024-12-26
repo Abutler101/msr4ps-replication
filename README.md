@@ -2,22 +2,38 @@
 ### Alexis Butler, Dan O'Keeffe, Santanu Kumar Dash
 
 ### Contents
-- **./data_collection** → All code to build the graph dataset
-- **./dataset** → A compressed snapshot of the graph dataset
-              used for the analysis set out in the paper
-- **./analysis** → Scripts used to sample and score the security,
-               criticality and popularity of packages in the 
-               graph dataset
+- **./dataset** → A compressed snapshot of the graph dataset, 
+                and tooling to load it into Neo4J.
+- **./analysis** → Scripts used for all parts of the analysis 
+                of packages in the graph dataset.
 - **./scorecard_validation** → Code used to validate the use of OSSF
                Scorecard as a proxy for security. Validation makes
                use of static analysis vuln density as a more direct
-               security measure
+               security measure.
 
 
 ### Requirements
-- Placeholder
+- Docker
+- Docker Compose V2
+- JQ
+- Make
+- curl
+- Python 3.8
+- A Python Virtual Environment manager (conda etc.)
 
 ### Setup
+The Setup instructions for each of the parts of this repo
+#### Dataset
+- Download the zipped dataset from Zenodo: https://zenodo.org/records/14561974
+- Move the zipped dataset into the dataset directory
+- cd into the dataset directory
+- Run `sudo make load data` - this unpacks the dataset snapshot and loads 
+  it into a Neo4J instance running on Docker
+- Run `make launch` - brings the Neo4J instance up and makes it accessible on 
+  port 7687
+#### Analysis
+- Placeholder
+#### Scorecard Validation
 - Placeholder
 
 ### Usage

@@ -1,0 +1,32 @@
+name: "msr4ps-dataset"
+services:
+  graph-db:
+    container_name: msr4ps-neo4j
+    image: graphstack/dozerdb:5.19.0
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=none
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4J_apoc_import_file_enabled=true
+      - NEO4J_apoc_import_file_use__neo4j__config=true
+      - NEO4J_PLUGINS=["apoc"]
+    volumes:
+      - graphdata:/var/lib/neo4j/data:/data
+      - graphdata:/var/lib/neo4j/logs:/logs
+      - graphdata:/var/lib/neo4j/import:/var/lib/neo4j/import
+      - graphdata:/var/lib/neo4j/plugins:/plugins
+      - graphdata:/var/lib/neo4j/conf:/conf
+    networks:
+      - msr4ps
+
+volumes:
+  graphdata:
+networks:
+  msr4ps:
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16
+          ip_range: 172.28.0.0/20
+          gateway: 172.28.15.254
