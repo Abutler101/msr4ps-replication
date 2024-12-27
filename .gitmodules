@@ -1,0 +1,3 @@
+[submodule "analysis/tail-estimation"]
+	path = analysis/tail-estimation
+	url = git@github.com:ivanvoitalov/tail-estimation.git
