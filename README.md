@@ -29,7 +29,7 @@
 ## Setup
 The Setup instructions for each of the parts of this repo
 ### Dataset
-- Download the zipped dataset from Zenodo: ...
+- Download the zipped dataset from Zenodo: https://zenodo.org/records/14577850
 - Move the zipped dataset into the dataset directory
 - cd into the dataset directory
 - Run `sudo make load data` - this unpacks the dataset snapshot and loads 

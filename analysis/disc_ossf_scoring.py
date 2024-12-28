@@ -24,7 +24,7 @@ class GithubConf(BaseSettings):
 
     class Config:
         env_prefix = "github_"
-        env_file = Path(__file__).parent.joinpath(".env")
+        env_file = Path(__file__).parents[1].joinpath(".env")
         extra = "ignore"
 
 
