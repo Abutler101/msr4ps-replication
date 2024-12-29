@@ -12,6 +12,8 @@
                Scorecard as a proxy for security. Validation makes
                use of static analysis vuln density as a more direct
                security measure.
+- **./dsic_validation** → Code used to validate the use of DISC
+               as a node criticality in Directed scale-free graphs. 
 - **./storage_interface** → (Internal) Src files for interfacing with the GraphDB 
 - **./shared_models** → (Internal) Src files defining various datamodels
 - **./api_clients** → (Internal) Src files supporting API interactions
@@ -46,6 +48,9 @@ The Setup instructions for each of the parts of this repo
 - Install dependencies from requirements.txt
 ### Scorecard Validation
 - Follow all previous setup Sections
+### DISC Validation
+- Create a Python3.8 virtual environment
+- Install dependencies from requirements.txt
 
 ## Usage Notes
 - Analysis scripts are inter-dependant:
