@@ -1,5 +1,6 @@
 # Replication Package - Links Between Package Popularity, Criticality, and Security in Software Ecosystems
 ### Alexis Butler, Dan O'Keeffe, Santanu Kumar Dash
+[![DOI](https://zenodo.org/badge/908544258.svg)](https://doi.org/10.5281/zenodo.14591714)
 
 ## Contents
 - **./dataset** → A compressed snapshot of the graph dataset, 
